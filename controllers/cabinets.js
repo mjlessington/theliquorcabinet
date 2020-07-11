@@ -5,9 +5,6 @@ const Cabinet = require('../models/cabinets.js');
 
 
 
-
-
-
 // index
 router.get('/', (req, res)=>{
     Cabinet.find({}, (error, allCabinets)=>{
@@ -58,11 +55,14 @@ router.get('/:id/edit',  (req, res)=>{
   
   // show
   router.get('/:id',  (req, res) =>{
+      console.log(req.params)
     Cabinet.findById(req.params.id, (err, foundCabinet)=>{
       res.render('show.ejs', {
         cabinet: foundCabinet,
         
       })
+    // console.log(foundCabinet)
+    // res.send({'message': "show route"})
     })
   })
   
