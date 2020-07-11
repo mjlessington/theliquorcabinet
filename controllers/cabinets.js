@@ -61,7 +61,7 @@ router.get('/', (req, res)=>{
     Cabinet.findById(req.params.id, (err, foundCabinet)=>{
       res.render('show.ejs', {
         cabinet: foundCabinet,
-        currentUser: req.session.currentUser
+        
       })
     })
   })

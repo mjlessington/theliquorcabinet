@@ -6,28 +6,26 @@
         <title></title>
     </head>
     <body>
-        <h1>Fruits index page</h1>
-        <nav>
-          <%- include('./partials/nav.ejs') %>
-        </nav>
+        <h1>Cabinet Index Page</h1>
+        
         <ul>
-            <% for(let i = 0; i < fruits.length; i++){ %>
+            <% for(let i = 0; i < cabinets.length; i++){ %>
               <li>
                 The
-                <a href="/fruits/<%=fruits[i].id %>">
-                    <%=fruits[i].name; %>
+                <a href="/cabinets/<%=cabinets[i].id %>">
+                    <%=cabinets[i].name; %>
                 </a>
-                is  <%=fruits[i].color; %>.
+                is  <%=cabinets[i].type; %>
                 
-                <% if(fruits[i].readyToEat === true){ %>
-                    It is ready to eat
+                <% if(cabinets[i].inStock === true){ %>
+                    We have cabinets[i].quantity in stock
                 <% } else { %>
-                    It is not ready to eat
+                    Seems like we need to make a run to the package store or put it on the wishlist
                 <% } %>
-                <form action="/fruits/<%= fruits[i].id %>?_method=DELETE" method="POST">
+                <form action="/cabinets/<%= cabinets[i].id %>?_method=DELETE" method="POST">
                     <input type="submit" value="DELETE"/>
                 </form>
-                <a href="/fruits/<%=fruits[i].id %>/edit">Edit</a>
+                <a href="/cabinets/<%=cabinets[i].id %>/edit">Edit</a>
             </li>
             <% } %>
         </ul>
