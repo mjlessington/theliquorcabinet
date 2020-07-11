@@ -11,14 +11,13 @@
         <ul>
             <% for(let i = 0; i < cabinets.length; i++){ %>
               <li>
-                The
                 <a href="/cabinets/<%=cabinets[i].id %>">
                     <%=cabinets[i].name; %>
                 </a>
-                is  <%=cabinets[i].type; %>
+                is a <%=cabinets[i].type; %>.
                 
                 <% if(cabinets[i].inStock === true){ %>
-                    We have cabinets[i].quantity in stock
+                    We have <%=cabinets[i].quantity ;%> bottle(s) in the cabinet.
                 <% } else { %>
                     Seems like we need to make a run to the package store or put it on the wishlist
                 <% } %>

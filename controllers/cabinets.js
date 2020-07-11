@@ -11,38 +11,38 @@ const Cabinet = require('../models/cabinets.js');
 // index
 router.get('/', (req, res)=>{
     Cabinet.find({}, (error, allCabinets)=>{
-      res.render('index.ejs', {
+    res.render('index.ejs', {
         cabinets: allCabinets
-      })
     })
-  })
-  
+    })
+})
+
   // new
-  router.get('/new', (req, res) => {
+router.get('/new', (req, res) => {
     res.render('new.ejs');
-  })
-  
+})
+
   // post
-  router.post('/',  (req, res)=>{
+router.post('/',  (req, res)=>{
     if(req.body.inStock === 'on'){ //if checked, req.body.inStock is set to 'on'
-      req.body.inStock = true;
+    req.body.inStock = true;
     } else { //if not checked, req.body.inStock is undefined
-      req.body.inStock = false;
+    req.body.inStock = false;
     }
     Cabinet.create(req.body, (error, createdCabinet)=>{
-      res.redirect('/cabinets');
+    res.redirect('/cabinets');
     })
-  })
-  
+})
+
   // edit
-  router.get('/:id/edit',  (req, res)=>{
+router.get('/:id/edit',  (req, res)=>{
     Cabinet.findById(req.params.id, (err, foundCabinet)=>{ //find the cabinet
         res.render('edit.ejs', {
           cabinet: foundCabinet //pass in found cabinet
-          
+        
         })
     })
-  })
+})
   
   // update
   router.put('/:id',  (req, res)=>{

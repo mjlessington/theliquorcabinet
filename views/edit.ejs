@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Cabinet Page</h1>
+    <form action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
+          <!--  NOTE: the form is pre-populated with values for the server-->
+          Name: <input type="text" name="name" value="<%=cabinet.name%>"/><br/>
+          Light or Dark: <input type="text" name="color" value="<%=cabinet.color%>"/><br/>
+          Quantity: <input type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
+          In Stock:
+        <input type="checkbox" name="inStock"
+            <% if(cabinet.inStock === true) { %>
+                checked
+            <% } %>
+        />
+        <br/>
+        <input type="submit" name="" value="Submit Changes"/>
+    </form>
+</body>
+</html>
