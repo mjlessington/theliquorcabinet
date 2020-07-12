@@ -2,15 +2,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <%- include('./partials/head.ejs') %>
     </head>
     <body>
         <nav>
             <%- include('./partials/nav.ejs') %>
           </nav>
         <h1>My Cabinet</h1>
-        
+        <a href="/cabinets/new">Add New Item</a>
         <ul>
             <% for(let i = 0; i < cabinets.length; i++){ %>
               <li>
@@ -29,7 +28,7 @@
                 </form>
                 <a href="/cabinets/<%=cabinets[i].id %>/edit">Edit</a>
             </li>
-            <a href="/cabinets/new">Add Item</a>
+            
             <% } %>
         </ul>
     </body>
