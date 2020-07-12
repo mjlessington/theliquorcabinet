@@ -6,7 +6,10 @@
         <title></title>
     </head>
     <body>
-        <h1>Cabinet Index Page</h1>
+        <nav>
+            <%- include('./partials/nav.ejs') %>
+          </nav>
+        <h1>My Cabinet</h1>
         
         <ul>
             <% for(let i = 0; i < cabinets.length; i++){ %>
@@ -26,6 +29,7 @@
                 </form>
                 <a href="/cabinets/<%=cabinets[i].id %>/edit">Edit</a>
             </li>
+            <a href="/cabinets/new">Add Item</a>
             <% } %>
         </ul>
     </body>

@@ -6,6 +6,9 @@
     <title>Cabinet</title>
 </head>
 <body>
+    <nav>
+        <%- include('./partials/nav.ejs') %>
+      </nav>
     <h1>Add Item to Cabinet</h1>
         <form action="/cabinets" method="POST">
             Name: <input type="text" name="name" /><br/>
