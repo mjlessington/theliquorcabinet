@@ -9,8 +9,8 @@
     <nav>
         <%- include('./partials/nav.ejs') %>
       </nav>
-    <h1>Edit Cabinet Item </h1>
-    <form class="form-group" action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
+    <h1 class="display-3 bg-warning">Edit Cabinet Item </h1>
+    <form class="form-group text-white" action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
           Brand Name: <input class="form-control" type="text" name="name" value="<%=cabinet.name%>"/><br/>
           Type of Alcohol: <input class="form-control" type="text" name="type" value="<%=cabinet.type%>"/><br/>
           Light or Dark: <input class="form-control" type="text" name="color" value="<%=cabinet.color%>"/><br/>

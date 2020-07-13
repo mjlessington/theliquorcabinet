@@ -1,6 +1,6 @@
   
 <!DOCTYPE html>
-<html>
+<html class="img-fluid">
     <head>
         <%- include('./partials/head.ejs') %>
     </head>
@@ -10,8 +10,8 @@
         <nav>
             <%- include('./partials/nav.ejs') %>
         </nav>
-        <h1>My Cabinet</h1>
-        <a href="/cabinets/new">Add New Item</a>
+        <h1 class="display-3 bg-warning">My Cabinet</h1>
+        <button class="btn btn-success"><a href="/cabinets/new">Add New Item</a></button>
         
         
             <% for(let i = 0; i < cabinets.length; i++){ %>
