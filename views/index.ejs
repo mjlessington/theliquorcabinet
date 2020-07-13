@@ -4,36 +4,55 @@
     <head>
         <%- include('./partials/head.ejs') %>
     </head>
-    <body>
+    <body class="container">
         <div class="text-center">
-            <img class="img-fluid" src="views/partials/taylor-friehl-_hoJzB7UBdM-unsplash.jpg"/>
         
         <nav>
             <%- include('./partials/nav.ejs') %>
         </nav>
         <h1>My Cabinet</h1>
         <a href="/cabinets/new">Add New Item</a>
-        <ul>
+        
+        
             <% for(let i = 0; i < cabinets.length; i++){ %>
-            <li>
-                <a href="/cabinets/<%=cabinets[i].id %>">
-                    <%=cabinets[i].name; %>
-                </a>
-                is a <%=cabinets[i].type; %>.
-                
-                <% if(cabinets[i].inStock === true){ %>
-                    We have <%=cabinets[i].quantity ;%> bottle(s) in the cabinet.
-                <% } else { %>
-                    Seems like we need to make a run to the package store or put it on the wishlist
-                <% } %>
-                <form action="/cabinets/<%= cabinets[i].id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE"/>
-                </form>
-                <a href="/cabinets/<%=cabinets[i].id %>/edit">Edit</a>
-            </li>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <%=cabinets[i].name; %>
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>
+                                <a href="/cabinets/<%=cabinets[i].id %>">
+                                    <%=cabinets[i].name; %>
+                                </a>
+                                is a <%=cabinets[i].type; %>. </br>
+                                Notes: <%=cabinets[i].notes; %></br>
+                                
+                                <% if(cabinets[i].inStock === true){ %>
+                                    We have <%=cabinets[i].quantity ;%> bottle(s) in the cabinet.
+                                <% } else { %>
+                                    Seems like we need to make a run to the package store or put it on the wishlist
+                                <% } %></br>
+                                <a href="/cabinets/<%=cabinets[i].id %>/edit">Edit</a>
+                                <form action="/cabinets/<%= cabinets[i].id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-warning">Delete</button>
+                                </form>
+                                
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>   
+            
             
             <% } %>
-        </ul>
+        
     </div>
     </body>
 </html>

@@ -4,16 +4,18 @@
     <%- include('./partials/head.ejs') %>
 </head>
 <body>
+    <div class="container"> 
+        <div class="text-center">
     <nav>
         <%- include('./partials/nav.ejs') %>
       </nav>
     <h1>Edit Cabinet Item </h1>
-    <form action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
-          <!--  NOTE: the form is pre-populated with values for the server-->
-          Brand Name: <input type="text" name="name" value="<%=cabinet.name%>"/><br/>
-          Type of Alcohol: <input type="text" name="type" value="<%=cabinet.type%>"/><br/>
-          Light or Dark: <input type="text" name="color" value="<%=cabinet.color%>"/><br/>
-          Quantity: <input type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
+    <form class="form-group" action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
+          Brand Name: <input class="form-control" type="text" name="name" value="<%=cabinet.name%>"/><br/>
+          Type of Alcohol: <input class="form-control" type="text" name="type" value="<%=cabinet.type%>"/><br/>
+          Light or Dark: <input class="form-control" type="text" name="color" value="<%=cabinet.color%>"/><br/>
+          Notes: <input class="form-control" type="text" name="notes" value="<%=cabinet.notes%>"/><br/>
+          Quantity: <input class="form-control" type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
           In Stock:
         <input type="checkbox" name="inStock"
             <% if(cabinet.inStock === true) { %>
@@ -21,7 +23,9 @@
             <% } %>
         />
         <br/>
-        <input type="submit" name="" value="Submit Changes"/>
+        <button type="submit" class="btn btn-primary">Submit Changes</button>
     </form>
+    </div>
+   </div> 
 </body>
 </html>
