@@ -10,7 +10,8 @@
     <h1>Edit Cabinet Item </h1>
     <form action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
           <!--  NOTE: the form is pre-populated with values for the server-->
-          Name: <input type="text" name="name" value="<%=cabinet.name%>"/><br/>
+          Brand Name: <input type="text" name="name" value="<%=cabinet.name%>"/><br/>
+          Type of Alcohol: <input type="text" name="type" value="<%=cabinet.type%>"/><br/>
           Light or Dark: <input type="text" name="color" value="<%=cabinet.color%>"/><br/>
           Quantity: <input type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
           In Stock:

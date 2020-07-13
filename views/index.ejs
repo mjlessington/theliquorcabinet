@@ -5,14 +5,17 @@
         <%- include('./partials/head.ejs') %>
     </head>
     <body>
+        <div class="text-center">
+            <img class="img-fluid" src="views/partials/taylor-friehl-_hoJzB7UBdM-unsplash.jpg"/>
+        
         <nav>
             <%- include('./partials/nav.ejs') %>
-          </nav>
+        </nav>
         <h1>My Cabinet</h1>
         <a href="/cabinets/new">Add New Item</a>
         <ul>
             <% for(let i = 0; i < cabinets.length; i++){ %>
-              <li>
+            <li>
                 <a href="/cabinets/<%=cabinets[i].id %>">
                     <%=cabinets[i].name; %>
                 </a>
@@ -31,5 +34,6 @@
             
             <% } %>
         </ul>
+    </div>
     </body>
 </html>

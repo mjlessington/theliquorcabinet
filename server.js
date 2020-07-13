@@ -45,7 +45,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //Test
 app.get('/' , (req, res) => {
-  res.render('home.ejs');
+  res.render('home.ejs', {
+    tabTitle: 'Cabinet-Home',
+  });
 });
 
 //Connect to controller

@@ -9,14 +9,17 @@ const Cabinet = require('../models/cabinets.js');
 router.get('/', (req, res)=>{
     Cabinet.find({}, (error, allCabinets)=>{
     res.render('index.ejs', {
-        cabinets: allCabinets
+        cabinets: allCabinets,
+        tabTitle: 'My Cabinet',
     })
     })
 })
 
   // new
 router.get('/new', (req, res) => {
-    res.render('new.ejs');
+    res.render('new.ejs', {
+      tabTitle: 'Add New',
+    }); 
 })
 
   // post
@@ -35,8 +38,8 @@ router.post('/',  (req, res)=>{
 router.get('/:id/edit',  (req, res)=>{
     Cabinet.findById(req.params.id, (err, foundCabinet)=>{ //find the cabinet
         res.render('edit.ejs', {
-          cabinet: foundCabinet //pass in found cabinet
-        
+          cabinet: foundCabinet, 
+          tabTitle: 'Edit Cabinet'
         })
     })
 })
@@ -59,7 +62,7 @@ router.get('/:id/edit',  (req, res)=>{
     Cabinet.findById(req.params.id, (err, foundCabinet)=>{
       res.render('show.ejs', {
         cabinet: foundCabinet,
-        
+        tabTitle: 'Cabinet Item',
       })
     // console.log(foundCabinet)
     // res.send({'message': "show route"})
