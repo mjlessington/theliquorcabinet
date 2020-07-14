@@ -11,11 +11,12 @@
       </nav>
       
     <h1 class="display-3 bg-warning">Cabinet Show page</h1>
-       <h3 class="h3 text-white"> The <%= cabinet.name %> is a type of <%=cabinet.type %>.
+       <h3 class="h3 text-white"> <%= cabinet.name %> 
         <% if(cabinet.inStock === true){ %>
-            We have that in the cabinet.
+            is in the cabinet. <a href="#">Find</a> where you can get more of it. 
         <% } else { %>
-            Sorry, not available at this time
+            unfortunately,is not available at this time. Check where you can find it.
+            <a href="#">here</a>.
         <% } %> 
     </h3>
         <nav>
