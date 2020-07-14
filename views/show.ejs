@@ -4,19 +4,24 @@
     <%- include('./partials/head.ejs') %>
 </head>
 <body>
+    <div class="container"> 
+        <div class="text-center">
     <nav>
         <%- include('./partials/nav.ejs') %>
       </nav>
       
-    <h1>Cabinet Show page</h1>
-        The <%= cabinet.name %> is a type of <%=cabinet.type %>.
+    <h1 class="display-3 bg-warning">Cabinet Show page</h1>
+       <h3 class="h3 text-white"> The <%= cabinet.name %> is a type of <%=cabinet.type %>.
         <% if(cabinet.inStock === true){ %>
             We have that in the cabinet.
         <% } else { %>
             Sorry, not available at this time
-        <% } %>
+        <% } %> 
+    </h3>
         <nav>
-            <a href="/cabinets">Back to Liquor Cabinet</a>
+            <button type="submit" class="btn btn-primary text-white"><a href="/cabinets" class="text-warning">Back to Liquor Cabinet</a></button>
         </nav>
+    </div>
+</div> 
 </body>
 </html>

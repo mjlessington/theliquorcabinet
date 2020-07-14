@@ -4,14 +4,14 @@
     <head>
         <%- include('./partials/head.ejs') %>
     </head>
-    <body class="container">
+    <body class="container-fluid">
         <div class="text-center">
         
         <nav>
             <%- include('./partials/nav.ejs') %>
         </nav>
         <h1 class="display-3 bg-warning">My Cabinet</h1>
-        <button class="btn btn-success"><a href="/cabinets/new">Add New Item</a></button>
+        <button class="btn btn-primary"><a href="/cabinets/new" class="text-warning">Add New Item</a></button>
         
         
             <% for(let i = 0; i < cabinets.length; i++){ %>
