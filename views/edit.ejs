@@ -11,12 +11,12 @@
       </nav>
     <h1 class="display-3 bg-warning">Edit Cabinet Item </h1>
     <form class="form-group text-white" action="/cabinets/<%=cabinet.id%>?_method=PUT" method="POST">
-          Brand Name: <input class="form-control" type="text" name="name" value="<%=cabinet.name%>"/><br/>
-          Type of Alcohol: <input class="form-control" type="text" name="type" value="<%=cabinet.type%>"/><br/>
-          Light or Dark: <input class="form-control" type="text" name="color" value="<%=cabinet.color%>"/><br/>
-          Notes: <textarea class="form-control" type="text" placeholder="Notes (description, where to find, pairings, etc)"name="notes" value="<%=cabinet.notes%>"/></textarea><br/>
-          Quantity: <input class="form-control" type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
-          In Stock:
+        Brand Name: <input class="form-control" type="text" name="name" value="<%=cabinet.name%>"/><br/>
+        Type of Alcohol: <input class="form-control" type="text" name="type" value="<%=cabinet.type%>"/><br/>
+        Light or Dark: <input class="form-control" type="text" name="color" value="<%=cabinet.color%>"/><br/>
+        Notes: <textarea class="form-control" type="text" placeholder="Notes (description, where to find, pairings, etc)"name="notes" value="<%=cabinet.notes%>"/></textarea><br/>
+        Quantity: <input class="form-control" type="number" name="quantity" value="<%=cabinet.quantity%>"/><br/>
+        In Stock:
         <input type="checkbox" name="inStock"
             <% if(cabinet.inStock === true) { %>
                 checked
