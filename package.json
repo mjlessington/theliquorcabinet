@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "concurrently \"nodemon\" \"npm start --prefix ../front_end/\""
   },
   "keywords": [],
   "author": "",
