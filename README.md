@@ -1,7 +1,7 @@
 # The Liquor Cabinet
 
 ## About
-In March of 2020, to a generation of medically advanced and tech-savvy humans, shook the world in a way unimaginable. A novel coronavirus, COVID-19, gave us no choice but to pause life the way we knew it and enter into a quarantine that forced us to do what most complain about not getting the chance to do enough: STAY HOME! Well, staying home and no bars led to a robust effort to stock and keep stocked my personal booze supply. Only thing is, keeping up with the inventory in my head made for a lot of guessing when at the Package Store. The Liquor Cabinet was developed as a practical way to keep up with that inventory as well as help your friends build theirs too with the sharing of wishlists. Besides, a healthy booze supply is what responsible adults do, right? RIGHT! Thanks for checking out The Liquor Cabinet! 
+The Liquor Cabinet is a practical way to digitize your spirits inventory as well as help your friends build theirs. Users will have the ability to create a shareable wishlist of spirits not in their inventory. The ability to share wishlists also is a way to optimze adult gift-giving while taking away the guessing aspect when wondering what spirits a person wants or will enjoy. Also built in the app is the ability to search nearby stores for available spirits. 
 
 ## Link to App
 http://theliquorcabinet.herokuapp.com/
